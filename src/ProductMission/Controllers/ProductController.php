@@ -52,7 +52,8 @@ class ProductController
 	 */
 	public function detail(string $id): string
 	{
-		// TODO: sanitize id?
+		// $id could be sanitized here but is not because sanitizing is specific
+		// for each driver and therefore should be performed by them individually.
 		
 		/* Get product */
 		$productData = $this->getProductDataFromCache($id);
